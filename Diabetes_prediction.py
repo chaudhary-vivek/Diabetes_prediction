@@ -7,7 +7,6 @@ import numpy as np
 import sklearn.impute
 import sklearn.ensemble
 
-
 # Importing dataset
 data = pd.read_csv("pima-data.csv")
 
@@ -59,7 +58,7 @@ print("number of rows missing age: {0}".format(len(data.loc[data['age'] == 0])))
 print("number of rows missing skin: {0}".format(len(data.loc[data['skin'] == 0])))
 # There are negligible number of zero values in most variables, there are 374 zero values in insulin and 227 zero values in skin
 
-# Replacing the zero values with the mean value of the variable
+# Replacing the zero values with the mean value of the feature
 # Importing imputer from scikit learn to do the replacing
 from sklearn.impute import SimpleImputer 
 # missing_values arguement defines what is to be replaced, strategy defines what it is to be replaced with, and axis=0 defines axis
