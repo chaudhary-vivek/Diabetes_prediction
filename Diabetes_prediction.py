@@ -9,7 +9,7 @@ import sklearn.ensemble
 
 
 # Importing dataset
-data = pd.read_csv("D:\Docs\DS\Diabetes\data\pima-data.csv")
+data = pd.read_csv("pima-data.csv")
 
 # Checking dataset for null values
 print(data.isnull().values.any())
@@ -83,8 +83,3 @@ predict_train_data = random_forest_model.predict(X_test)
 from sklearn import metrics
 print("Accuracy = {0:.3f}".format(metrics.accuracy_score(y_test, predict_train_data)))
 # The accuracy is 73.6%
-
-
-
-
-
